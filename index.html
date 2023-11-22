@@ -11,6 +11,17 @@
             <meta property ="og:description" content="basic template for SIT 725 prac 1">
                 <!--compiled and minified css-->
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+            <script>
+                    function changeText() {
+                        var textsArray =["SIT 725","SIT 731", "SIT 719", "SIT 763", "Text 5"]
+                        var number = getRandomNumberBetween(0, textsArray.length -1)
+                        console.log("Index: ", number)
+                        document.getElementById("heading").innerHTML = textsArray[number];
+                    }
+                    function getRandomNumberBetween(min, max){
+                        return Math.floor(Math.random() * (max - min + 1) + min);
+                    }    
+            </script>
     </head>
     <body>
         <div class="container">
